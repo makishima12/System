@@ -7,6 +7,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('system/',include('system.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/',include('django.contrib.auth.urls')),
+    path('accounts/',include('accounts.urls')),
     path('',RedirectView.as_view(url='/system/')),
 ]
 
